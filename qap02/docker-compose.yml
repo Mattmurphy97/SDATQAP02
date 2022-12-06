@@ -1,0 +1,12 @@
+version: '3'
+services:
+  myapp-main:
+    image: keyin-qap02:latest
+    ports:
+      - 8080:8080
+    environment:
+      - spring.datasource.url=jdbc:mysql://host.docker.internal:3306/spring_2022
+      - spring.datasource.url=jdbc:mysql://qap02.cndocllscvv0.us-east-1.rds.amazonaws.com/qap02
+      - spring.datasource.password=admin123
+      - spring.datasource.username=admin123
+      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
